@@ -1,0 +1,201 @@
+.content .aboutmepage {
+    width: 90%;
+    justify-self: center;
+    display: grid;
+    overflow: hidden;
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.aboutmepage .slides {
+    position: relative;
+    justify-self: center;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border: 2px solid var(--main-color);
+    border-radius: 2em;
+    box-shadow: 4px 4px 10px var(--secondary-color), -4px 0px 10px var(--secondary-color);
+    overflow: hidden;
+}
+
+.slides .information {
+    position: relative;
+    background-image: var(--background-image);
+    border: 0px solid var(--main-color);
+    height: 100%;
+}
+
+.information .information_slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.information p {
+    margin: 3em 0 0 2em;
+    width: 90%;
+    font-size: 1.1em;
+    text-align: justify;
+    color: var(--secondary-color);
+}
+
+.slides .slider {
+    display: grid;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+    background-image: var(--background-image);
+}
+
+.slider .slide {
+    color: var(--secondary-color);
+    min-height: 6em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+    border-right: 2px solid var(--main-color);
+}
+
+.slide:nth-child(1) {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.slide:nth-child(2) {
+    border-bottom: 2px solid var(--main-color);
+}
+
+.slide h2 {
+    font-size: 1.1em;
+    width: 60%;
+}
+
+.slider .slide.active {
+    background-color: var(--main-color);
+}
+
+.aboutmepage .skills {
+    width: 90%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.skills h2 {
+    color: var(--main-color);
+    text-align: center;
+    grid-column: span 2;
+}
+
+.skills .box {
+    width: 80%;
+    margin-top: 4em;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    border: 2px solid var(--main-color);
+    border-radius: 2em;
+    box-shadow: 4px 4px 10px var(--secondary-color), -4px 0px 10px var(--secondary-color);
+    background-image: var(--background-image);
+}
+
+.box h3 {
+    grid-column: span 2;
+    justify-self: center;
+    color: var(--secondary-color);
+}
+
+.box .element {
+    width: 75%;
+    margin: 2em;
+    color: var(--main-color);
+    font-size: 1.2em;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    justify-self: center;
+}
+
+.element .skill {
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+}
+
+.element .desc {
+    margin: 0;
+    padding: 0;
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+@media (max-width: 1300px) {
+    .content .aboutmepage {
+        grid-template-columns: 100%;
+    }
+    
+    .aboutmepage .slides {
+        grid-template-columns: 100%;
+    }
+    
+    .slides .information {
+        height: 35em;
+    }
+
+    .information_slide p {
+        margin: 3em 5%;
+    }
+    
+    .slides .slider {
+        display: grid;
+        height: 100%;
+        overflow: hidden;
+        z-index: 2;
+        background-image: var(--background-image);
+    }
+    
+    .slider .slide {
+        color: var(--secondary-color);
+        min-height: 6em;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.5s;
+        cursor: pointer;
+        border: 1px solid var(--main-color);
+    }
+    
+    .slide h2 {
+        font-size: 1.1em;
+        width: 60%;
+    }
+    
+    .slider .slide.active {
+        background-color: var(--main-color);
+    }
+    
+    .aboutmepage .skills {
+        grid-template-columns: 100%;
+    }
+    
+    .skills h2 {
+        grid-column: span 1;
+    }
+    
+    .skills .box {
+        width: 100%;
+    }
+    
+    .box .element {
+        font-size: 1em;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .skills .box {
+        width: 70%;
+    }
+}
